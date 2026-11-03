@@ -1,0 +1,34 @@
+{
+  "name": "cc-ai-cam-mcp",
+  "version": "1.0.0",
+  "description": "Open-source MCP server for making Claude Code easier",
+  "scripts": {
+    "typecheck": "tsc",
+    "test:local": "tsx scripts/smoke.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karriprakash/cc-ai-cam-mcp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karriprakash/cc-ai-cam-mcp/issues"
+  },
+  "homepage": "https://github.com/karriprakash/cc-ai-cam-mcp#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  }
+}
