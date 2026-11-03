@@ -1,5 +1,5 @@
 import { WebStandardStreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js";
-import { createServer } from "../src/server.js";
+import { createServer } from "../src/mcp-server.js";
 
 // Stateless Streamable HTTP: a new server + transport per request, so it
 // works on serverless functions with no shared memory between invocations.
