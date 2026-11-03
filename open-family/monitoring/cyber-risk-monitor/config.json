@@ -1,0 +1,130 @@
+{
+  "platform": "Women's open-source career platform (ideas via calls, voice notes, WhatsApp)",
+  "endpoints": [
+    {
+      "id": "trustadda-web",
+      "name": "trustadda.com website",
+      "url": "https://trustadda.com/"
+    },
+    {
+      "id": "trustadda-mcp",
+      "name": "cc-ai-cam MCP endpoint",
+      "url": "https://mcp.trustadda.com/mcp"
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "cc-ai-cam",
+      "url": "https://mcp.trustadda.com/mcp"
+    }
+  ],
+  "tlsWarnDays": 21,
+  "scanPaths": [
+    "../../agents",
+    "../../runtime",
+    "../../tools",
+    "../../skills",
+    "../../scripts",
+    "../mcp-testing",
+    "."
+  ],
+  "scanIgnore": [
+    "node_modules",
+    ".git",
+    "out",
+    "test",
+    "demo.mjs"
+  ],
+  "riskRegister": [
+    {
+      "id": "R1",
+      "threat": "Contributor's phone number or address leaks (doxxing)",
+      "asset": "Contributor profiles, call logs",
+      "likelihood": 4,
+      "impact": 5,
+      "control": "No phone numbers, emails or ID numbers in code, logs or exports",
+      "check": "pii"
+    },
+    {
+      "id": "R2",
+      "threat": "Voice notes carry location or identity metadata",
+      "asset": "WhatsApp and call recordings",
+      "likelihood": 4,
+      "impact": 5,
+      "control": "Strip metadata and never commit raw media to repositories",
+      "check": "media"
+    },
+    {
+      "id": "R3",
+      "threat": "API keys leak and attackers read submissions",
+      "asset": "Backend, MCP servers",
+      "likelihood": 3,
+      "impact": 5,
+      "control": "No secrets committed; keys in a secret manager",
+      "check": "secrets"
+    },
+    {
+      "id": "R4",
+      "threat": "Traffic intercepted on public Wi-Fi",
+      "asset": "Web app, MCP endpoint",
+      "likelihood": 3,
+      "impact": 4,
+      "control": "HTTPS everywhere with HSTS and valid certificates",
+      "check": "transport"
+    },
+    {
+      "id": "R5",
+      "threat": "Clickjacking or script injection on the web app",
+      "asset": "Web app",
+      "likelihood": 3,
+      "impact": 4,
+      "control": "CSP, frame protection and nosniff headers",
+      "check": "headers"
+    },
+    {
+      "id": "R6",
+      "threat": "AI tool server is unreachable or misconfigured",
+      "asset": "cc-ai-cam MCP server",
+      "likelihood": 3,
+      "impact": 3,
+      "control": "MCP handshake and tool listing pass from the monitor",
+      "check": "mcp"
+    },
+    {
+      "id": "R7",
+      "threat": "Account takeover through SIM swap or OTP interception",
+      "asset": "Contributor accounts",
+      "likelihood": 3,
+      "impact": 5,
+      "control": "Offer app-based 2FA or passkeys, not SMS only",
+      "check": null
+    },
+    {
+      "id": "R8",
+      "threat": "Harassment or stalking through public contributor profiles",
+      "asset": "Community features",
+      "likelihood": 4,
+      "impact": 5,
+      "control": "Private-by-default profiles, block and report, moderation queue",
+      "check": null
+    },
+    {
+      "id": "R9",
+      "threat": "Recordings used without consent or kept too long",
+      "asset": "Idea submissions",
+      "likelihood": 3,
+      "impact": 4,
+      "control": "Explicit consent prompt and a written retention limit",
+      "check": null
+    },
+    {
+      "id": "R10",
+      "threat": "Impersonation of the platform to phish contributors",
+      "asset": "WhatsApp channel, brand",
+      "likelihood": 3,
+      "impact": 4,
+      "control": "Verified WhatsApp Business number; published official contact list",
+      "check": null
+    }
+  ]
+}
