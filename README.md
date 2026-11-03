@@ -17,7 +17,7 @@ claude mcp add --transport http cc-ai-cam https://mcp.trustadda.com/mcp
 | `ping` | Checks the server is reachable        |
 | `echo` | Returns a message (connection test)   |
 
-Add new tools in `src/server.ts`.
+Add new tools in `src/mcp-server.ts`.
 
 ## Develop
 
