@@ -1,0 +1,19 @@
+{
+  "name": "open-family",
+  "version": "0.1.0",
+  "description": "An open-source family of agents that carries women's ideas from every city to the world, privately and fairly.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "demo": "node scripts/demo.mjs",
+    "nodes": "node scripts/spawn-node.mjs --all",
+    "monitor": "node monitoring/cyber-risk-monitor/monitor.mjs",
+    "monitor:selftest": "node monitoring/cyber-risk-monitor/selftest.mjs",
+    "mcp:test": "node monitoring/mcp-testing/test-mcp.mjs"
+  },
+  "optionalDependencies": {
+    "@anthropic-ai/sdk": "*"
+  }
+}

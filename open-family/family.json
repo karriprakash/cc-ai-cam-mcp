@@ -1,0 +1,28 @@
+{
+  "id": "global",
+  "name": "Global Family Council",
+  "countries": [
+    {
+      "id": "IN",
+      "name": "India",
+      "cities": [
+        { "id": "IN-kakinada", "name": "Kakinada", "languages": ["te", "en"], "channels": ["call", "voice-note", "whatsapp"], "mentors": [{ "alias": "mentor-ka-1", "field": "java", "languages": ["te", "en"] }] },
+        { "id": "IN-hyderabad", "name": "Hyderabad", "languages": ["te", "hi", "en"], "channels": ["call", "voice-note", "whatsapp"], "mentors": [{ "alias": "mentor-hy-1", "field": "robotics", "languages": ["te", "en"] }, { "alias": "mentor-hy-2", "field": "java", "languages": ["hi", "en"] }] }
+      ]
+    },
+    {
+      "id": "KE",
+      "name": "Kenya",
+      "cities": [
+        { "id": "KE-nairobi", "name": "Nairobi", "languages": ["sw", "en"], "channels": ["call", "whatsapp"], "mentors": [{ "alias": "mentor-nb-1", "field": "mobile", "languages": ["sw", "en"] }] }
+      ]
+    },
+    {
+      "id": "BR",
+      "name": "Brazil",
+      "cities": [
+        { "id": "BR-sao-paulo", "name": "São Paulo", "languages": ["pt"], "channels": ["voice-note", "whatsapp"], "mentors": [] }
+      ]
+    }
+  ]
+}

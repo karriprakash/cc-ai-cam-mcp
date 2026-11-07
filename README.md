@@ -28,3 +28,11 @@ npm run test:local
 ```
 
 Deployed on Vercel: `api/mcp.ts` is the serverless function, and `vercel.json` maps `/mcp` to it.
+
+## Open Family agents
+
+[`open-family/`](open-family/) is a family of agents (global council, country, city and intake) that carries women's ideas, sent by call, voice note or WhatsApp, from every city to the world. It keeps contributors private, gives fair contribution points and connects similar ideas across countries. It also holds the cyber risk monitor and the test harness for this MCP server. See [`open-family/README.md`](open-family/README.md).
+
+```bash
+cd open-family && npm test && npm run demo
+```
