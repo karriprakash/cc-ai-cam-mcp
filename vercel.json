@@ -1,5 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "rewrites": [{ "source": "/mcp", "destination": "/api/mcp" }]
+  "rewrites": [
+    { "source": "/mcp", "destination": "/api/mcp" },
+    { "source": "/trustadda/mcp", "destination": "/api/trustadda" },
+    { "source": "/mypgspace/mcp", "destination": "/api/mypgspace" },
+    { "source": "/omnivideo/mcp", "destination": "/api/omnivideo" },
+    { "source": "/social-push/mcp", "destination": "/api/social-push" }
+  ]
 }

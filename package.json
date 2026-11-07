@@ -4,7 +4,10 @@
   "description": "Open-source MCP server for making Claude Code easier",
   "scripts": {
     "typecheck": "tsc",
-    "test:local": "tsx scripts/smoke.ts"
+    "test:local": "tsx scripts/smoke.ts",
+    "smoke:all": "tsx scripts/smoke-all.ts",
+    "new-mcp": "tsx scripts/new-mcp.ts",
+    "mcp": "tsx mcps/_shared/stdio.ts"
   },
   "repository": {
     "type": "git",
